@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.mainController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="27.0" prefHeight="663.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+         <children>
+                                           <SplitPane dividerPositions="0.20121028744326777" layoutX="-1.0" orientation="VERTICAL" prefHeight="663.0" prefWidth="1282.0">
+                                               <items>
+                                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="1280.0">
+                                                       <children>
+                                                           <Label layoutX="43.0" layoutY="42.0" text="Header" textFill="#046272">
+                                                               <effect>
+                                                                   <Reflection topOpacity="0.2" />
+                                                               </effect>
+                                                               <font>
+                                                                   <Font name="Gill Sans MT" size="40.0" />
+                                                               </font>
+                                                           </Label>
+                                                           <Label alignment="CENTER" layoutX="1042.0" layoutY="27.0" prefHeight="30.0" prefWidth="76.0" text="Sesión:">
+                                                               <font>
+                                                                   <Font size="20.0" />
+                                                               </font>
+                                                           </Label>
+                                                           <Label fx:id="lblUsername" layoutX="1118.0" layoutY="27.0" prefHeight="30.0" prefWidth="122.0">
+                                                               <font>
+                                                                   <Font size="20.0" />
+                                                               </font>
+                                                           </Label>
+                                                           <Label alignment="CENTER" layoutX="996.0" layoutY="101.0" prefHeight="30.0" prefWidth="122.0" text="Ult. Inicio de sesión:">
+                                                               <font>
+                                                                   <Font size="13.0" />
+                                                               </font>
+                                                           </Label>
+                                                           <Label fx:id="lblLastSeen" alignment="BASELINE_LEFT" layoutX="1119.0" layoutY="101.0" prefHeight="30.0" prefWidth="159.0">
+                                                               <font>
+                                                                   <Font size="13.0" />
+                                                               </font>
+                                                           </Label>
+                                                       </children></AnchorPane>
+                                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="530.0" prefWidth="1280.0">
+                                                       <children>
+                                                           <SplitPane prefHeight="525.0" prefWidth="1280.0">
+                                                               <items>
+                                                                   <GridPane>
+                                                                       <columnConstraints>
+                                                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="387.0" />
+                                                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.0" minWidth="10.0" prefWidth="465.0" />
+                                                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                       </columnConstraints>
+                                                                       <rowConstraints>
+                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                       </rowConstraints>
+                                                                       <children>
+                                                                           <StackPane prefHeight="216.0" prefWidth="426.0" GridPane.rowIndex="1">
+                                                                               <children>
+                                                                                   <Button mnemonicParsing="false" onAction="#gotoUsers" prefHeight="69.0" prefWidth="143.0" text="Usuarios" />
+                                                                               </children>
+                                                                           </StackPane>
+                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                                               <children>
+                                                                                   <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Boton4" />
+                                                                               </children>
+                                                                           </StackPane>
+                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                                               <children>
+                                                                                   <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Boton5" />
+                                                                               </children>
+                                                                           </StackPane>
+                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                                               <children>
+                                                                                   <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Boton6" />
+                                                                               </children>
+                                                                           </StackPane>
+                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                                               <children>
+                                                                                   <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Boton7" />
+                                                                               </children>
+                                                                           </StackPane>
+                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                                               <children>
+                                                                                   <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Boton9" />
+                                                                               </children>
+                                                                           </StackPane>
+                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                                               <children>
+                                                                                   <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Boton10" />
+                                                                               </children>
+                                                                           </StackPane>
+                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                               <children>
+                                                                                   <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Boton2" />
+                                                                               </children>
+                                                                           </StackPane>
+                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                               <children>
+                                                                                   <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" text="Boton3" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </items></SplitPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <MenuBar prefHeight="27.0" prefWidth="1280.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
