@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 
 
 public class MainRunnable extends Application {
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/Views/loginView.fxml"));
@@ -18,10 +17,6 @@ public class MainRunnable extends Application {
         primaryStage.centerOnScreen();
         primaryStage.setResizable(false);
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
 

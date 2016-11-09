@@ -1,42 +1,31 @@
 package Controllers;
 
-import Functions.FXFunctions;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 
-public class mainController implements Initializable {
+public class mainController {
     @FXML
     private Label lblUsername;
     @FXML
     private Label lblLastSeen;
 
-    public void setLblUsername(String text) {
-        lblUsername.setText(text);
-    }
-
-    public void setLblLastSeen(String text) {
-        lblLastSeen.setText(text);
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    @FXML
+    public void initialize(String lblUsername, String lblLastSeen) {
+        this.lblUsername.setText(lblUsername);
+        this.lblLastSeen.setText(lblLastSeen == null ? "N/A" : lblLastSeen);
     }
 
     @FXML
     void gotoUsers(ActionEvent event) throws IOException, SQLException {
-        // Hide window and show the new one.
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/userAdminView.fxml"));
         Parent root = loader.load();
         Stage stage = new Stage();

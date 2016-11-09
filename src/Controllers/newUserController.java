@@ -5,12 +5,14 @@ import Functions.FXFunctions;
 import MainRunnable.MainRunnable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.sql.SQLException;
+
 public class newUserController {
-    MainRunnable mr = new MainRunnable();
     FXFunctions fx = new FXFunctions();
     DBRequests db = new DBRequests();
 
@@ -23,24 +25,15 @@ public class newUserController {
     @FXML
     private PasswordField txtPasswordFieldVerification;
 
-    @FXML
-    void exitNewUserWindow(ActionEvent event) {
-        try {
-            fx.hideCurrentWindow(event);
-            mr.start(new Stage());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     @FXML
     void createNewUser(ActionEvent event) {
         boolean created;
-        if (txtUsernameField.getText().trim().isEmpty() || txtUsernameField.equals(null)) {
+        if (txtUsernameField.getText().trim().isEmpty() || txtUsernameField.getText() == null) {
             fx.makeNewERRORalert("ERROR", "El campo de usuario está vacío y/o contiene solo espacios en blanco.").showAndWait();
-        } else if (txtPasswordField.getText().trim().isEmpty() || txtPasswordField.getText().equals(null)) {
+        } else if (txtPasswordField.getText().trim().isEmpty() || txtPasswordField.getText() == null) {
             fx.makeNewERRORalert("ERROR", "El campo de contraseña está vacío y/o contiene solo espacios en blanco.").showAndWait();
-        } else if (txtPasswordFieldVerification.getText().trim().isEmpty() || txtPasswordFieldVerification.getText().equals(null)) {
+        } else if (txtPasswordFieldVerification.getText().trim().isEmpty() || txtPasswordFieldVerification.getText() == null) {
             fx.makeNewERRORalert("ERROR", "El campo de verificación está vacío y/o contiene solo espacios en blanco.").showAndWait();
         } else {
             if (txtPasswordField.getText().trim().equals(txtPasswordFieldVerification.getText().trim())) {
@@ -52,10 +45,9 @@ public class newUserController {
                     txtPasswordField.setText("");
                     txtPasswordFieldVerification.setText("");
                 } else {
-                    fx.makeNewINFOalert("Exito", "El usuario " + txtUsernameField.getText().trim() + " se creó con exito ahora puedes iniciar sesión").showAndWait();
+                    fx.makeNewINFOalert("Exito", "El usuario " + txtUsernameField.getText().trim() + " se creó con éxito ahora puede ser utilizado para iniciar sesión.").showAndWait();
                     try {
                         fx.hideCurrentWindow(event);
-                        mr.start(new Stage());
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
