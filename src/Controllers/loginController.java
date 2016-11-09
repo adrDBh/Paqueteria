@@ -64,21 +64,5 @@ public class loginController implements Initializable {
             lblUsername.setText("");
             lblPassword.setText("");
         }
-
-    }
-
-    @FXML
-    private void CreateUserAction(ActionEvent event) throws IOException {
-        // NOT BEING USED
-        fx.hideCurrentWindow(event);
-        // Render second window.
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/newUserView.fxml"));
-        Parent root = loader.load();
-        Stage stage = new Stage();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Crear nuevo usuario");
-        stage.setResizable(false);
-        stage.show();
     }
 }
