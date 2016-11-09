@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
@@ -34,7 +35,7 @@ public class mainController implements Initializable {
     }
 
     @FXML
-    void gotoUsers(ActionEvent event) throws IOException {
+    void gotoUsers(ActionEvent event) throws IOException, SQLException {
         // Hide window and show the new one.
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/userAdminView.fxml"));
         Parent root = loader.load();
@@ -42,6 +43,8 @@ public class mainController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Administración de usuarios");
+        userAdminController mc = loader.getController();
+        mc.fillTable();
         stage.centerOnScreen();
         stage.setResizable(false);
         stage.show();

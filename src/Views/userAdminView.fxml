@@ -1,31 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.userAdminController">
-   <children>
-      <Label alignment="CENTER" layoutX="289.0" layoutY="28.0" prefHeight="27.0" prefWidth="290.0" text="Administración de usuarios">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TextField layoutX="5.0" layoutY="153.0" prefHeight="25.0" prefWidth="217.0" promptText="Búsqueda" />
-      <Button layoutX="228.0" layoutY="152.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="51.0" text="Buscar" />
-      <Button layoutX="687.0" layoutY="152.0" mnemonicParsing="false" text="Nuevo" />
-      <Button layoutX="744.0" layoutY="153.0" mnemonicParsing="false" text="Borrar" />
-      <Button layoutX="799.0" layoutY="153.0" mnemonicParsing="false" text="Editar" />
-      <Button layoutX="616.0" layoutY="152.0" mnemonicParsing="false" text="Refrescar" />
-      <TableView fx:id="TableView" layoutY="183.0" prefHeight="271.0" prefWidth="868.0">
-        <columns>
-          <TableColumn minWidth="100.0" prefWidth="75.0" text="ID" />
-          <TableColumn minWidth="192.0" prefWidth="75.0" text="Usuario" />
-            <TableColumn minWidth="192.0" prefWidth="75.0" text="Contraseña" />
-            <TableColumn minWidth="192.0" prefWidth="75.0" text="Creado" />
-            <TableColumn maxWidth="1.7976931348623157E308" minWidth="192.0" prefWidth="-1.0" resizable="false" text="Último login" />
-        </columns>
-      </TableView>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.userAdminController">
+    <children>
+        <Label alignment="CENTER" layoutX="289.0" layoutY="28.0" prefHeight="27.0" prefWidth="290.0" text="Administración de usuarios">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField layoutX="5.0" layoutY="153.0" prefHeight="25.0" prefWidth="217.0" promptText="Búsqueda" />
+        <Button layoutX="228.0" layoutY="152.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="51.0" text="Buscar" />
+        <Button layoutX="687.0" layoutY="152.0" mnemonicParsing="false" text="Nuevo" />
+        <Button layoutX="744.0" layoutY="153.0" mnemonicParsing="false" text="Borrar" />
+        <Button layoutX="799.0" layoutY="153.0" mnemonicParsing="false" text="Editar" />
+        <Button layoutX="616.0" layoutY="152.0" mnemonicParsing="false" onAction="#onRefresh" text="Refrescar" />
+        <TableView fx:id="tblView" layoutY="183.0" prefHeight="271.0" prefWidth="868.0">
+            <columns>
+                <TableColumn minWidth="100.0" prefWidth="75.0" resizable="false" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="192.0" prefWidth="75.0" resizable="false" text="Usuario">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="username" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="192.0" prefWidth="75.0" resizable="false" text="Contraseña">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="password" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="192.0" prefWidth="75.0" resizable="false" text="Creado">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="ca" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="192.0" prefWidth="75.0" resizable="false" text="UltLog">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="ll" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </children>
 </AnchorPane>

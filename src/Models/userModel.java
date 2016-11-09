@@ -1,34 +1,62 @@
 package Models;
 
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 
 public class userModel {
 
-    private final SimpleIntegerProperty id = new SimpleIntegerProperty();
-    private final SimpleStringProperty Usuario = new SimpleStringProperty();
-    private final SimpleStringProperty Password = new SimpleStringProperty();
-    private final SimpleStringProperty CreatedAt = new SimpleStringProperty();
-    private final SimpleStringProperty LastLogin = new SimpleStringProperty();
+    private final SimpleStringProperty id;
+    private final SimpleStringProperty username;
+    private final SimpleStringProperty password;
+    private final SimpleStringProperty ca;
+    private final SimpleStringProperty ll;
 
-    public int getId() {
+    public userModel(String id, String username, String password, String created_at, String last_login) {
+        this.id = new SimpleStringProperty(id);
+        this.username = new SimpleStringProperty(username);
+        this.password = new SimpleStringProperty(password);
+        this.ca = new SimpleStringProperty(created_at);
+        this.ll = new SimpleStringProperty(last_login);
+    }
+
+    public String getId() {
         return id.get();
     }
 
-    public String getUsuario() {
-        return Usuario.get();
+    public void setId(String id) {
+        this.id.set(id);
+    }
+
+    public String getUsername() {
+        return username.get();
+    }
+
+    public void setUsername(String username) {
+        this.username.set(username);
     }
 
     public String getPassword() {
-        return Password.get();
+        return password.get();
     }
 
-    public String getCreatedAt() {
-        return CreatedAt.get();
+    public void setPassword(String password) {
+        this.password.set(password);
     }
 
-    public String getLastLogin() {
-        return LastLogin.get();
+    public String getCa() {
+        return ca.get();
+    }
+
+    public void setCa(String ca) {
+        this.ca.set(ca);
+    }
+
+    public String getLl() {
+        return ll.get();
+    }
+
+    public void setLl(String ll) {
+        this.ll.set(ll);
     }
 }
+
