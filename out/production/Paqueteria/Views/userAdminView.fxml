@@ -22,7 +22,7 @@
         <Button layoutX="744.0" layoutY="153.0" mnemonicParsing="false" text="Borrar" />
         <Button layoutX="799.0" layoutY="153.0" mnemonicParsing="false" text="Editar" />
         <Button layoutX="616.0" layoutY="152.0" mnemonicParsing="false" onAction="#onRefresh" text="Refrescar" />
-        <TableView fx:id="tblView" layoutY="183.0" prefHeight="271.0" prefWidth="868.0">
+        <TableView fx:id="tblView" layoutY="183.0" prefHeight="271.0" prefWidth="868.0" editable="true">
             <columns>
                 <TableColumn minWidth="100.0" prefWidth="75.0" resizable="false" text="ID">
                     <cellValueFactory>
