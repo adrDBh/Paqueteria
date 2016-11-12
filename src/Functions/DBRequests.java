@@ -1,18 +1,13 @@
 package Functions;
 
 import java.sql.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.Date;
 
 public class DBRequests {
 
     private Connection dbo;
     private String user;
     private String LastLogin;
-    Date dateToday = new Date();
-    Timestamp todayStamp = new Timestamp(dateToday.getTime());
+
 
     // CONSTRUCTOR
     public DBRequests() {
@@ -72,35 +67,12 @@ public class DBRequests {
                     setUser(usuario);
                     setLastLogin(rs.getString("LastLogin"));
                     PreparedStatement setCurrentStamp = dbo.prepareStatement("UPDATE Login SET LastLogin = ? WHERE Username = ?");
-                    setCurrentStamp.setString(1, todayStamp.toString());
+                    setCurrentStamp.setString(1, new TimeStamps().getStamps());
                     setCurrentStamp.setString(2, rs.getString("Username"));
                     setCurrentStamp.execute();
                 }
             }
             rs.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            return bool;
-        }
-    }
-
-    public boolean CreateUser(String username, String password) {
-        boolean bool = false;
-        try {
-            PreparedStatement repeatedDataVerification = dbo.prepareStatement("SELECT Username FROM login WHERE Username = ?");
-            repeatedDataVerification.setString(1, username);
-            boolean isRepeated = repeatedDataVerification.executeQuery().next();
-            if (isRepeated) {
-                bool = false;
-            } else {
-                bool = true;
-                PreparedStatement newUser = dbo.prepareStatement("INSERT INTO Login VALUES(?,?,?,NULL)");
-                newUser.setString(1, username);
-                newUser.setString(2, password);
-                newUser.setString(3, todayStamp.toString());
-                newUser.execute();
-            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

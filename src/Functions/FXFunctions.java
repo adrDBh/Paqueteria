@@ -31,4 +31,12 @@ public class FXFunctions {
         a.setContentText(content);
         return a;
     }
+
+    public Alert makeNewConfirmationAlert(String title, String header, String content) {
+        Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+        a.setTitle(title);
+        a.setContentText(content);
+        a.setHeaderText(header);
+        return a;
+    }
 }

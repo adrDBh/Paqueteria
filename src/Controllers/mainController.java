@@ -33,7 +33,7 @@ public class mainController {
         stage.setScene(scene);
         stage.setTitle("Administración de usuarios");
         userAdminController mc = loader.getController();
-        mc.fillTable();
+        mc.refreshTable();
         stage.centerOnScreen();
         stage.setResizable(false);
         stage.show();
