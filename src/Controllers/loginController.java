@@ -33,7 +33,6 @@ public class loginController {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.setTitle("Ventana principal");
-            stage.setResizable(false);
             stage.centerOnScreen();
             stage.show();
         } else if (lblUsername.getText().trim().isEmpty() || lblUsername.getText() == null) {

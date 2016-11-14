@@ -35,7 +35,6 @@ public class mainController {
         userAdminController mc = loader.getController();
         mc.refreshTable();
         stage.centerOnScreen();
-        stage.setResizable(false);
         stage.show();
     }
 }
