@@ -20,7 +20,6 @@ public class TableFunctions {
             return rs;
         }
     }
-
     public boolean CreateUser(String username, String password) {
         boolean bool = false;
         try {
@@ -34,7 +33,7 @@ public class TableFunctions {
                 PreparedStatement newUser = dbo.prepareStatement("INSERT INTO Login VALUES(?,?,?,NULL)");
                 newUser.setString(1, username);
                 newUser.setString(2, password);
-                newUser.setString(3, new TimeStamps().getStamps());
+                newUser.setTimestamp(3, new TimeStamps().getStamps());
                 newUser.execute();
             }
         } catch (Exception e) {
@@ -44,7 +43,6 @@ public class TableFunctions {
             return bool;
         }
     }
-
     public boolean deleteUser(int id) {
         boolean result = false;
         try {
@@ -59,7 +57,6 @@ public class TableFunctions {
             return result;
         }
     }
-
     public boolean editUser(String username, String password, int id) {
         boolean result = false;
         try {

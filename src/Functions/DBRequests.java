@@ -3,11 +3,9 @@ package Functions;
 import java.sql.*;
 
 public class DBRequests {
-
     private Connection dbo;
     private String user;
     private String LastLogin;
-
 
     // CONSTRUCTOR
     public DBRequests() {
@@ -30,7 +28,6 @@ public class DBRequests {
 
     // CONNECTION OBJECT SETTER
     public void setDbo(Connection dbo) {
-
         this.dbo = dbo;
     }
 
@@ -67,7 +64,7 @@ public class DBRequests {
                     setUser(usuario);
                     setLastLogin(rs.getString("LastLogin"));
                     PreparedStatement setCurrentStamp = dbo.prepareStatement("UPDATE Login SET LastLogin = ? WHERE Username = ?");
-                    setCurrentStamp.setString(1, new TimeStamps().getStamps());
+                    setCurrentStamp.setTimestamp(1, new TimeStamps().getStamps());
                     setCurrentStamp.setString(2, rs.getString("Username"));
                     setCurrentStamp.execute();
                 }

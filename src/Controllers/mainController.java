@@ -23,7 +23,6 @@ public class mainController {
         this.lblUsername.setText(lblUsername);
         this.lblLastSeen.setText(lblLastSeen == null ? "N/A" : lblLastSeen);
     }
-
     @FXML
     void gotoUsers(ActionEvent event) throws IOException, SQLException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/userAdminView.fxml"));
