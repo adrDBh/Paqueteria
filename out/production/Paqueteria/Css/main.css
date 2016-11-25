@@ -2,10 +2,6 @@
     -fx-background-image: url("../Images/bg_blue.jpg");
 }
 
-#titleText {
-
-}
-
 #btn {
     -fx-color: black;
     -fx-fill: blue;

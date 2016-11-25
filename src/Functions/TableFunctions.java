@@ -12,7 +12,7 @@ public class TableFunctions {
         try {
             // TODO
             // THIS METHOD SHOULD BE REUSED FOR GETTING ALL DATA FROM DIFFERENT TABLES NOT JUST ONE.
-            CallableStatement st = dbo.prepareCall("{call dbo.listLogin}");
+            CallableStatement st = dbo.prepareCall("exec dbo.listLogin");
             rs = st.executeQuery();
         } catch (Exception e) {
             e.printStackTrace();

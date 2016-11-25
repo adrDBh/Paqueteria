@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Optional;
@@ -19,6 +20,7 @@ public class userAdminController {
     TableFunctions tf = new TableFunctions();
     int currentID;
     userModel um;
+
     private ObservableList<userModel> data;
     @FXML
     private TableView<userModel> userTable;
@@ -61,10 +63,12 @@ public class userAdminController {
                 cleanFields();
             } else {
                 refreshTable();
-                fx.makeNewINFOalert("Exito", "El usuario " + usernameField.getText() + " se creó con éxito, ahora puede ser utilizado para acceder al sistema.").showAndWait();
+                fx.makeNewINFOalert("Exito", "El usuario \"" + usernameField.getText() + "\" se creó con éxito, ahora puede ser utilizado para acceder al sistema.").showAndWait();
                 cleanFields();
             }
         }
+        activateFields(true);
+        saveBtn.setDisable(true);
     }
 
     @FXML
@@ -74,6 +78,7 @@ public class userAdminController {
             tf.deleteUser(currentID);
             refreshTable();
             cleanFields();
+            activateFields(true);
         }
     }
 
@@ -85,6 +90,7 @@ public class userAdminController {
             tf.editUser(usernameField.getText().trim(), passwordField.getText().trim(), currentID);
             refreshTable();
             cleanFields();
+            activateFields(true);
         }
     }
 
