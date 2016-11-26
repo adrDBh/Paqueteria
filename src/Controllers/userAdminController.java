@@ -8,6 +8,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 import java.sql.ResultSet;
@@ -72,7 +74,7 @@ public class userAdminController {
     }
 
     @FXML
-    void onDelete(ActionEvent event) {
+    void onDelete() {
         Optional<ButtonType> decision = fx.makeNewConfirmationAlert("Confirmación", "Eliminar entrada", "Estás seguro que quieres elminiar la entrada seleccionada?").showAndWait();
         if (decision.get() == ButtonType.OK) {
             tf.deleteUser(currentID);
@@ -146,4 +148,10 @@ public class userAdminController {
         editBtn.setDisable(deactivate);
     }
 
+    public void onDelPressed(KeyEvent keyEvent) {
+        if (keyEvent.getCode().equals(KeyCode.DELETE)) {
+            System.err.println(um.getId() + ", " + um.getUsername() + ", " + um.getPassword() + ", " + um.getCa() + ", " + um.getLl());
+            onDelete();
+        }
+    }
 }

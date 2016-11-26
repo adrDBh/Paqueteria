@@ -9,3 +9,11 @@
     -fx-background-color: #3D5AFE;
     -fx-font-size: 20px;
 }
+
+#btn:pressed{
+    -fx-color: black;
+    -fx-fill: darkblue;
+    -fx-padding: 4px;
+    -fx-background-color: darkblue;
+    -fx-font-size: 20px;
+}

@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.userAdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.userAdminController">
    <children>
       <SplitPane dividerPositions="0.20234113712374582" orientation="VERTICAL" prefHeight="600.0" prefWidth="1280.0">
         <items>
@@ -62,7 +62,7 @@
                         <Button fx:id="saveBtn" disable="true" mnemonicParsing="false" onAction="#onSave" text="Guardar" />
                      </children>
                   </HBox>
-                  <TableView fx:id="userTable" layoutX="247.0" onMouseClicked="#onMouseAction" prefHeight="474.0" prefWidth="1035.0">
+                  <TableView fx:id="userTable" layoutX="247.0" onKeyPressed="#onDelPressed" onMouseClicked="#onMouseAction" prefHeight="474.0" prefWidth="1035.0">
                     <columns>
                         <TableColumn maxWidth="1.7976931348623157E308" prefWidth="75.0" resizable="false" text="ID">
                             <cellValueFactory>
