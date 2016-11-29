@@ -88,7 +88,7 @@ CREATE TABLE Dir_origen_destino (
   idCliente      INT FOREIGN KEY REFERENCES Cliente (idCliente)
 );
 
-CREATE TABLE det_domicilio (
+CREATE TABLE Det_domicilio (
   idDetDomicilio INT PRIMARY KEY IDENTITY (1, 1),
   idEstado       INT FOREIGN KEY REFERENCES Estado (idEstado),
   idColonia      INT FOREIGN KEY REFERENCES Colonia (idColonia),
@@ -113,7 +113,7 @@ CREATE TABLE Rastreo (
   Folio          VARCHAR(10) NOT NULL
 );
 
-CREATE TABLE det_cliente (
+CREATE TABLE Det_cliente (
   idDetCliente INT PRIMARY KEY IDENTITY (1, 1),
   idCliente    INT FOREIGN KEY REFERENCES Cliente (idCliente),
   idTelefono   INT FOREIGN KEY REFERENCES Telefono (idTelefono),
