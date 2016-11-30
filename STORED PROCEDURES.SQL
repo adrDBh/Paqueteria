@@ -72,3 +72,36 @@ BEGIN
   DELETE FROM Telefono
   WHERE Telefono.idTelefono = @PhoneID
 END
+
+-- EDITAR CLIENTE
+CREATE PROCEDURE spEditClient
+    @idCliente        INT,
+    @NAME             VARCHAR(50),
+    @APP              VARCHAR(50),
+    @APM              VARCHAR(50),
+    @PHONENUMBER      VARCHAR(50),
+    @PHONEDESCRIPTION VARCHAR(50),
+    @EMAILADDRESS     VARCHAR(50),
+    @EMAILDESCRIPTION VARCHAR(50)
+AS
+  BEGIN
+    DECLARE @ClientID INT, @PhoneID INT, @EmailID INT
+    SET @ClientID = (SELECT idCliente
+                     FROM Det_cliente
+                     WHERE idCliente = @idCliente)
+    SET @PhoneID = (SELECT idTelefono
+                    FROM Det_cliente
+                    WHERE idCliente = @idCliente)
+    SET @EmailID = (SELECT idEmail
+                    FROM Email_cliente
+                    WHERE idCliente = @idCliente);
+    UPDATE Cliente
+    SET Nombre = @NAME, Apeido_Paterno = @APP, Apeido_Materno = @APM
+    WHERE idCliente = @ClientID
+    UPDATE Telefono
+    SET Numero = @PHONENUMBER, Descripcion = @PHONEDESCRIPTION
+    WHERE idTelefono = @PhoneID
+    UPDATE Email
+    SET Correo = @EMAILADDRESS, Descripcion = @EMAILDESCRIPTION
+    WHERE idEmail = @EmailID
+  END

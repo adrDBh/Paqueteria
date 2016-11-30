@@ -29,7 +29,8 @@ CREATE TABLE Cliente (
   idCliente      INT PRIMARY KEY IDENTITY (1, 1),
   Nombre         VARCHAR(15) NOT NULL,
   Apeido_Paterno VARCHAR(30) NOT NULL,
-  Apeido_Materno VARCHAR(30) NOT NULL
+  Apeido_Materno VARCHAR(30) NOT NULL,
+  Activo BIT DEFAULT ((1)) NOT NULL
 );
 
 CREATE TABLE Zona_horaria (
@@ -48,7 +49,8 @@ CREATE TABLE Paquete (
   Fragil      BIT         NOT NULL,
   Prioridad   BIT         NOT NULL,
   Peso        VARCHAR(10) NOT NULL,
-  Dimenciones VARCHAR(15) NOT NULL
+  Dimenciones VARCHAR(15) NOT NULL,
+  Activo BIT DEFAULT ((1)) NOT NULL
 );
 
 CREATE TABLE Empleado (
@@ -58,7 +60,8 @@ CREATE TABLE Empleado (
   Apellido_Materno VARCHAR(15) NOT NULL,
   Sexo             VARCHAR(10) NOT NULL,
   Edad             VARCHAR(2)  NOT NULL,
-  Turno            VARCHAR(10) NOT NULL
+  Turno            VARCHAR(10) NOT NULL,
+  Activo BIT DEFAULT ((1)) NOT NULL
 );
 
 CREATE TABLE Localizacion (
