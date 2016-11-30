@@ -9,7 +9,7 @@ CREATE TABLE Estado (
 
 CREATE TABLE Ciudad (
   idCiudad INT PRIMARY KEY IDENTITY (1, 1),
-  Ciudad   VARCHAR(15) NOT NULL
+  Ciudad   VARCHAR(40) NOT NULL
 );
 
 CREATE TABLE Colonia (
@@ -28,8 +28,8 @@ CREATE TABLE Domicilio (
 CREATE TABLE Cliente (
   idCliente      INT PRIMARY KEY IDENTITY (1, 1),
   Nombre         VARCHAR(15) NOT NULL,
-  Apeido_Paterno VARCHAR(15) NOT NULL,
-  Apeido_Materno VARCHAR(15) NOT NULL
+  Apeido_Paterno VARCHAR(30) NOT NULL,
+  Apeido_Materno VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE Zona_horaria (
@@ -68,12 +68,12 @@ CREATE TABLE Localizacion (
 
 CREATE TABLE Transporte (
   idTransporte INT PRIMARY KEY IDENTITY (1, 1),
-  Tipo         VARCHAR(15) NOT NULL
+  Tipo         VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Email (
   idEmail     INT PRIMARY KEY IDENTITY (1, 1),
-  Correo      VARCHAR(15) NOT NULL,
+  Correo      VARCHAR(50) NOT NULL,
   Descripcion VARCHAR(15) NOT NULL
 );
 
@@ -85,7 +85,8 @@ CREATE TABLE Dir_origen_destino (
   idDomicilio    INT FOREIGN KEY REFERENCES Domicilio (idDomicilio),
   idPaquete      INT FOREIGN KEY REFERENCES Paquete (idPaquete),
   idLocalizacion INT FOREIGN KEY REFERENCES Localizacion (idLocalizacion),
-  idCliente      INT FOREIGN KEY REFERENCES Cliente (idCliente)
+  idCliente      INT FOREIGN KEY REFERENCES Cliente (idCliente),
+  od             VARCHAR(15)
 );
 
 CREATE TABLE Det_domicilio (

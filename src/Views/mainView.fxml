@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -14,15 +19,15 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.mainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.mainController">
    <children>
       <AnchorPane layoutX="-1.0" layoutY="27.0" prefHeight="663.0" prefWidth="1282.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="27.0">
          <children>
-                                           <SplitPane dividerPositions="0.20121028744326777" layoutX="-1.0" orientation="VERTICAL" prefHeight="663.0" prefWidth="1282.0">
+                                           <SplitPane dividerPositions="0.20121028744326777" layoutX="-1.0" orientation="VERTICAL" prefHeight="663.0" prefWidth="901.0">
                                                <items>
-                                                   <AnchorPane id="Header" minHeight="0.0" minWidth="0.0" prefHeight="130.0" prefWidth="1280.0" stylesheets="@../Css/main.css">
+                                                   <AnchorPane id="Header" minHeight="0.0" minWidth="0.0" prefHeight="130.0" prefWidth="900.0" stylesheets="@../Css/main.css">
                                                        <children>
-                                                           <Label id="titleText" layoutX="562.0" layoutY="41.0" stylesheets="@../Css/main.css" text="Paqueteria" textFill="WHITE">
+                                                           <Label id="titleText" layoutX="397.0" layoutY="43.0" stylesheets="@../Css/main.css" text="Fast MX" textFill="WHITE">
                                                                <effect>
                                                                    <Reflection topOpacity="0.2" />
                                                                </effect>
@@ -30,99 +35,83 @@
                                                                    <Font name="Meiryo" size="30.0" />
                                                                </font>
                                                            </Label>
-                                                           <Label alignment="CENTER" layoutX="996.0" layoutY="73.0" prefHeight="30.0" prefWidth="76.0" text="Sesión:" textFill="WHITE">
+                                                           <Label alignment="CENTER" layoutX="708.0" layoutY="28.0" prefHeight="30.0" prefWidth="76.0" text="Sesión" textFill="WHITE">
                                                                <font>
                                                                    <Font size="20.0" />
                                                                </font>
                                                            </Label>
-                                                           <Label fx:id="lblUsername" layoutX="1068.0" layoutY="73.0" prefHeight="30.0" prefWidth="210.0" textFill="WHITE">
+                                                           <Label fx:id="lblUsername" alignment="CENTER" contentDisplay="CENTER" layoutX="641.0" layoutY="65.0" prefHeight="30.0" prefWidth="210.0" textAlignment="CENTER" textFill="WHITE">
                                                                <font>
                                                                    <Font size="20.0" />
                                                                </font>
                                                            </Label>
-                                                           <Label alignment="CENTER" layoutX="996.0" layoutY="101.0" prefHeight="30.0" prefWidth="122.0" text="Ult. Inicio de sesión:" textFill="WHITE">
+                                                           <Label alignment="CENTER" layoutX="620.0" layoutY="101.0" prefHeight="30.0" prefWidth="122.0" text="Ult. Inicio de sesión:" textFill="WHITE">
                                                                <font>
                                                                    <Font size="13.0" />
                                                                </font>
                                                            </Label>
-                                                           <Label fx:id="lblLastSeen" alignment="BASELINE_LEFT" layoutX="1119.0" layoutY="101.0" prefHeight="30.0" prefWidth="159.0" textFill="WHITE">
+                                                           <Label fx:id="lblLastSeen" alignment="CENTER" layoutX="739.0" layoutY="101.0" prefHeight="30.0" prefWidth="159.0" textFill="WHITE">
                                                                <font>
                                                                    <Font size="13.0" />
                                                                </font>
                                                            </Label>
                                                        </children></AnchorPane>
                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="530.0" prefWidth="1280.0">
-                                                       <children>
-                                                           <SplitPane prefHeight="525.0" prefWidth="1280.0">
-                                                               <items>
-                                                                   <GridPane prefHeight="523.0" prefWidth="1280.0">
-                                                                       <columnConstraints>
-                                                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="387.0" />
-                                                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.0" minWidth="10.0" prefWidth="465.0" />
-                                                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                                       </columnConstraints>
-                                                                       <rowConstraints>
-                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                                       </rowConstraints>
-                                                                       <children>
-                                                                           <StackPane prefHeight="216.0" prefWidth="426.0" GridPane.rowIndex="1">
-                                                                               <children>
-                                                                                   <Button id="btn" mnemonicParsing="false" onAction="#gotoUsers" prefHeight="69.0" prefWidth="143.0" stylesheets="@../Css/main.css" text="Usuarios" />
-                                                                               </children>
-                                                                           </StackPane>
-                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
-                                                                               <children>
-                                                                                   <Button id="btn" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" stylesheets="@../Css/main.css" text="Boton4" />
-                                                                               </children>
-                                                                           </StackPane>
-                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                                                               <children>
-                                                                                   <Button id="btn" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" stylesheets="@../Css/main.css" text="Boton5" />
-                                                                               </children>
-                                                                           </StackPane>
-                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                                                               <children>
-                                                                                   <Button id="btn" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" stylesheets="@../Css/main.css" text="Boton6" />
-                                                                               </children>
-                                                                           </StackPane>
-                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
-                                                                               <children>
-                                                                                   <Button id="btn" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" stylesheets="@../Css/main.css" text="Boton7" />
-                                                                               </children>
-                                                                           </StackPane>
-                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                                                               <children>
-                                                                                   <Button id="btn" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" stylesheets="@../Css/main.css" text="Boton9" />
-                                                                               </children>
-                                                                           </StackPane>
-                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                                                                               <children>
-                                                                                   <Button id="btn" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" stylesheets="@../Css/main.css" text="Boton10" />
-                                                                               </children>
-                                                                           </StackPane>
-                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                                                               <children>
-                                                                                   <Button id="btn" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" stylesheets="@../Css/main.css" text="Boton2" />
-                                                                               </children>
-                                                                           </StackPane>
-                                                                           <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                                                               <children>
-                                                                                   <Button id="btn" mnemonicParsing="false" prefHeight="69.0" prefWidth="143.0" stylesheets="@../Css/main.css" text="Boton3" />
-                                       </children>
-                                    </StackPane>
+                     <children>
+                        <GridPane alignment="CENTER" layoutY="174.0" prefHeight="350.0" prefWidth="899.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="450.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="451.0" minWidth="10.0" prefWidth="449.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="451.0" minWidth="10.0" prefWidth="449.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <Button id="btn" mnemonicParsing="false" onAction="#locatePackage" prefHeight="38.0" prefWidth="190.0" stylesheets="@../Css/main.css" text="Rastrear paquete" wrapText="true" />
                                  </children>
-                              </GridPane>
-                           </items></SplitPane>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Button id="btn" mnemonicParsing="false" onAction="#serviceManagement" prefHeight="38.0" prefWidth="190.0" stylesheets="@../Css/main.css" text="Manejar servicios" wrapText="true" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button id="btn" mnemonicParsing="false" onAction="#registerService" prefHeight="38.0" prefWidth="190.0" stylesheets="@../Css/main.css" text="Registrar servicio" wrapText="true" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button id="btn" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="38.0" prefWidth="190.0" stylesheets="@../Css/main.css" text="Inicios de sesión" wrapText="true" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Button id="btn" mnemonicParsing="false" onAction="#employeeManagement" prefHeight="38.0" prefWidth="190.0" stylesheets="@../Css/main.css" text="Empleados" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button id="btn" mnemonicParsing="false" onAction="#clientManagement" prefHeight="38.0" prefWidth="190.0" stylesheets="@../Css/main.css" text="Clientes" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </GridPane>
+                        <Label alignment="CENTER" layoutX="333.0" layoutY="76.0" text="Panel administrativo" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
               </items>
             </SplitPane>
          </children>
       </AnchorPane>
-      <MenuBar layoutX="1.0" layoutY="1.0" prefHeight="27.0" prefWidth="1280.0">
+      <MenuBar layoutX="1.0" layoutY="1.0" prefHeight="27.0" prefWidth="900.0">
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>

@@ -16,7 +16,6 @@ public class MainRunnable extends Application {
             primaryStage.setScene(scene);
             primaryStage.setTitle("Iniciar sesión");
             primaryStage.centerOnScreen();
-            primaryStage.setResizable(false);
             primaryStage.show();
         } catch (IOException e) {
             System.err.println(e.getMessage());
