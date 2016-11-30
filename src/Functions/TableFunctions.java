@@ -90,7 +90,8 @@ public class TableFunctions {
     public void deleteClient(int currentID) {
         try {
             CallableStatement st = dbo.prepareCall("EXECUTE spDelClient ?");
-            st.setInt(1,currentID);
+            st.setInt(1, currentID);
+            st.execute();
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }

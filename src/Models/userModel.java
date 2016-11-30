@@ -23,40 +23,20 @@ public class userModel {
         return id.get();
     }
 
-    public void setId(String id) {
-        this.id.set(id);
-    }
-
     public String getUsername() {
         return username.get();
-    }
-
-    public void setUsername(String username) {
-        this.username.set(username);
     }
 
     public String getPassword() {
         return password.get();
     }
 
-    public void setPassword(String password) {
-        this.password.set(password);
-    }
-
     public String getCa() {
         return ca.get();
     }
 
-    public void setCa(String ca) {
-        this.ca.set(ca);
-    }
-
     public String getLl() {
         return ll.get();
-    }
-
-    public void setLl(String ll) {
-        this.ll.set(ll);
     }
 }
 

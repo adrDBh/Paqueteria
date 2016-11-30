@@ -41,6 +41,7 @@ public class clientManagementController {
         Optional<ButtonType> decision = fx.makeNewConfirmationAlert("Confirmación", "Eliminar entrada", "Estás seguro que quieres elminiar la entrada seleccionada?").showAndWait();
         if (decision.get() == ButtonType.OK) {
             tf.deleteClient(currentID);
+            refreshTable();
         }
     }
 
