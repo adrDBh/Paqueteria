@@ -65,7 +65,8 @@ public class mainController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Administración de clientes");
-        clientManagementController controller = loader.getController();
+        clientManagementController cmc = loader.getController();
+        cmc.refreshTable();
         stage.centerOnScreen();
         stage.show();
     }

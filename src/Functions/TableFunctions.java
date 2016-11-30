@@ -12,7 +12,7 @@ public class TableFunctions {
         try {
             // TODO
             // THIS METHOD SHOULD BE REUSED FOR GETTING ALL DATA FROM DIFFERENT TABLES NOT JUST ONE.
-            CallableStatement st = dbo.prepareCall("exec dbo.listLogin");
+            CallableStatement st = dbo.prepareCall("EXECUTE listLogin");
             rs = st.executeQuery();
         } catch (Exception e) {
             e.printStackTrace();
@@ -20,6 +20,7 @@ public class TableFunctions {
             return rs;
         }
     }
+
     public boolean CreateUser(String username, String password) {
         boolean bool = false;
         try {
@@ -43,6 +44,7 @@ public class TableFunctions {
             return bool;
         }
     }
+
     public boolean deleteUser(int id) {
         boolean result = false;
         try {
@@ -57,6 +59,7 @@ public class TableFunctions {
             return result;
         }
     }
+
     public boolean editUser(String username, String password, int id) {
         boolean result = false;
         try {
@@ -70,6 +73,26 @@ public class TableFunctions {
             System.err.println(e.getMessage());
         } finally {
             return result;
+        }
+    }
+
+    public ResultSet getClientData() {
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spListClient");
+            rs = st.executeQuery();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } finally {
+            return rs;
+        }
+    }
+
+    public void deleteClient(int currentID) {
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spDelClient ?");
+            st.setInt(1,currentID);
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
         }
     }
 }

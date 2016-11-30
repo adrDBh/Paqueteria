@@ -6,61 +6,88 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.clientManagementController">
-   <children>
-      <SplitPane dividerPositions="0.20234113712374582" orientation="VERTICAL" prefHeight="600.0" prefWidth="1280.0">
-         <items>
-            <AnchorPane id="Header" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" stylesheets="@../Css/userAdmin.css">
-               <children>
-                  <Label alignment="CENTER" layoutX="431.0" layoutY="35.0" prefHeight="48.0" prefWidth="417.0" text="Administración de clientes" textFill="WHITE">
-                     <font>
-                        <Font name="Meiryo" size="30.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-               <children>
-                  <Separator layoutX="244.0" orientation="VERTICAL" prefHeight="474.0" prefWidth="0.0" />
-                  <HBox alignment="CENTER" layoutX="250.0" layoutY="435.0" prefHeight="25.0" prefWidth="179.0" spacing="6.0">
-                     <children>
-                        <Button fx:id="newBtn" mnemonicParsing="false" onAction="#onNew" text="Nuevo" />
-                        <Button fx:id="editBtn" disable="true" mnemonicParsing="false" onAction="#onEdit" prefHeight="25.0" prefWidth="54.0" text="Editar" />
-                        <Button fx:id="delBtn" disable="true" mnemonicParsing="false" onAction="#onDelete" text="Eliminar" />
-                     </children>
-                  </HBox>
-                  <TableView fx:id="userTable" onKeyPressed="#onDelPressed" onMouseClicked="#onMouseAction" prefHeight="427.0" prefWidth="1278.0">
-                     <columns>
-                        <TableColumn maxWidth="1.7976931348623157E308" prefWidth="75.0" resizable="false" text="ID">
-                           <cellValueFactory>
-                              <PropertyValueFactory property="id" />
-                           </cellValueFactory>
-                        </TableColumn>
-                        <TableColumn maxWidth="1.7976931348623157E308" prefWidth="240.0" resizable="false" text="Usuario">
-                           <cellValueFactory>
-                              <PropertyValueFactory property="username" />
-                           </cellValueFactory>
-                        </TableColumn>
-                        <TableColumn maxWidth="1.7976931348623157E308" prefWidth="240.0" resizable="false" text="Contraseña">
-                           <cellValueFactory>
-                              <PropertyValueFactory property="password" />
-                           </cellValueFactory>
-                        </TableColumn>
-                        <TableColumn maxWidth="1.7976931348623157E308" prefWidth="240.0" resizable="false" text="Creado el">
-                           <cellValueFactory>
-                              <PropertyValueFactory property="ca" />
-                           </cellValueFactory>
-                        </TableColumn>
-                        <TableColumn maxWidth="1.7976931348623157E308" prefWidth="240.0" resizable="false" text="Ultimo inicio">
-                           <cellValueFactory>
-                              <PropertyValueFactory property="ll" />
-                           </cellValueFactory>
-                        </TableColumn>
-                     </columns>
-                  </TableView>
-               </children>
-            </AnchorPane>
-         </items>
-      </SplitPane>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.clientManagementController">
+    <children>
+        <SplitPane dividerPositions="0.20234113712374582" orientation="VERTICAL" prefHeight="600.0" prefWidth="1280.0">
+            <items>
+                <AnchorPane id="Header" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0"
+                            stylesheets="@../Css/userAdmin.css">
+                    <children>
+                        <Label alignment="CENTER" layoutX="431.0" layoutY="35.0" prefHeight="48.0" prefWidth="417.0"
+                               text="Administración de clientes" textFill="WHITE">
+                            <font>
+                                <Font name="Meiryo" size="30.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <Separator layoutX="244.0" orientation="VERTICAL" prefHeight="474.0" prefWidth="0.0"/>
+                        <HBox alignment="CENTER" layoutX="250.0" layoutY="435.0" prefHeight="25.0" prefWidth="179.0"
+                              spacing="6.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#onNew" text="Nuevo"/>
+                                <Button disable="true" mnemonicParsing="false" onAction="#onEdit" prefHeight="25.0"
+                                        prefWidth="54.0" text="Editar"/>
+                                <Button disable="true" mnemonicParsing="false" onAction="#onDelete" text="Eliminar"/>
+                            </children>
+                        </HBox>
+                        <TableView fx:id="clientTable" onKeyPressed="#onDelPressed" onMouseClicked="#onMouseAction"
+                                   prefHeight="427.0" prefWidth="1280.0">
+                            <columns>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="25.0" resizable="false"
+                                             text="ID">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="id"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="181.43" text="Nombre">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="Name"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="181.43"
+                                             text="Apellido paterno">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="APP"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="181.43"
+                                             text="Apellido materno">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="APM"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="181.43" text="# Telefónico">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="PhoneNumber"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="181.43"
+                                             text="Descripción teléfono">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="PhoneDescription"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="181.43" text="Email">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="EmailAddress"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="181.43" resizable="false"
+                                             text="Descripción email">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="EmailDescription"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
 </AnchorPane>
