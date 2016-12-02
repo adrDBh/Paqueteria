@@ -30,7 +30,7 @@ CREATE TABLE Cliente (
   Nombre         VARCHAR(15) NOT NULL,
   Apeido_Paterno VARCHAR(30) NOT NULL,
   Apeido_Materno VARCHAR(30) NOT NULL,
-  Activo BIT DEFAULT ((1)) NOT NULL
+  Estatus DATETIME
 );
 
 CREATE TABLE Zona_horaria (
@@ -50,7 +50,7 @@ CREATE TABLE Paquete (
   Prioridad   BIT         NOT NULL,
   Peso        VARCHAR(10) NOT NULL,
   Dimenciones VARCHAR(15) NOT NULL,
-  Activo BIT DEFAULT ((1)) NOT NULL
+  Estatus DATETIME
 );
 
 CREATE TABLE Empleado (
@@ -61,7 +61,7 @@ CREATE TABLE Empleado (
   Sexo             VARCHAR(10) NOT NULL,
   Edad             VARCHAR(2)  NOT NULL,
   Turno            VARCHAR(10) NOT NULL,
-  Activo BIT DEFAULT ((1)) NOT NULL
+  Estatus DATETIME
 );
 
 CREATE TABLE Localizacion (

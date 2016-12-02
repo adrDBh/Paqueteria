@@ -7,13 +7,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Optional;
@@ -27,6 +33,8 @@ public class clientManagementController {
     private ObservableList<clientModel> data;
     @FXML
     private TableView<clientModel> clientTable;
+    @FXML
+    private Label lblRows;
 
     @FXML
     void onNew(ActionEvent event) {
@@ -48,7 +56,6 @@ public class clientManagementController {
     @FXML
     void onDelPressed(KeyEvent ke) {
         if (ke.getCode().equals(KeyCode.DELETE)) {
-            System.err.println(cm.getId());
             onDelete();
         }
     }
@@ -56,30 +63,55 @@ public class clientManagementController {
     public void onMouseAction(MouseEvent mouseEvent) {
         cm = clientTable.getSelectionModel().getSelectedItem();
         if (cm != null) {
-            System.out.println(cm.getId());
             this.currentID = Integer.parseInt(cm.getId());
         }
     }
 
     void refreshTable() {
         try {
+            int rows = 0;
             data = FXCollections.observableArrayList();
             ResultSet rs = new TableFunctions().getClientData();
             while (rs.next()) {
+                rows++;
                 data.add(new clientModel(
                         rs.getString("idCliente"),
                         rs.getString("Nombre"),
                         rs.getString("Apeido_Paterno"),
-                        rs.getString("Apeido_Materno"),
-                        rs.getString("Numero"),
-                        rs.getString("Descripcion"),
-                        rs.getString("Correo"),
-                        rs.getString(8)
+                        rs.getString("Apeido_Materno")
                 ));
                 clientTable.setItems(data);
             }
+            lblRows.setText(Integer.toString(rows));
         } catch (SQLException e) {
             System.err.println(e.getMessage());
+        }
+
+    }
+
+    @FXML
+    public void onClientEmails(ActionEvent event) {
+        if (cm.getId() != null) {
+            System.out.println(cm.getId() + ", " + cm.getName());
+        }
+
+
+    }
+
+    @FXML
+    public void onClientPhones(ActionEvent event) throws IOException {
+        if (cm.getId() != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/clientPhoneView.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Administración de teléfonos");
+            clientPhoneManagerController cpmc = loader.getController();
+            cpmc.initialize(cm.getName(), Integer.parseInt(cm.getId()));
+            cpmc.refreshTable();
+            stage.centerOnScreen();
+            stage.show();
         }
     }
 }

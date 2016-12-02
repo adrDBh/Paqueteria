@@ -10,8 +10,6 @@ public class TableFunctions {
 
     public ResultSet getTableData() {
         try {
-            // TODO
-            // THIS METHOD SHOULD BE REUSED FOR GETTING ALL DATA FROM DIFFERENT TABLES NOT JUST ONE.
             CallableStatement st = dbo.prepareCall("EXECUTE listLogin");
             rs = st.executeQuery();
         } catch (Exception e) {
@@ -87,6 +85,18 @@ public class TableFunctions {
         }
     }
 
+    public ResultSet getPhoneData(int ID) {
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spListClientPhones ?");
+            st.setInt(1, ID);
+            rs = st.executeQuery();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } finally {
+            return rs;
+        }
+    }
+
     public void deleteClient(int currentID) {
         try {
             CallableStatement st = dbo.prepareCall("EXECUTE spDelClient ?");
@@ -94,6 +104,30 @@ public class TableFunctions {
             st.execute();
         } catch (SQLException e) {
             System.err.println(e.getMessage());
+        }
+    }
+
+    public void editPhone(int id, String editedPhone, String editedDescription) {
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spEditPhone ?,?,?");
+            st.setInt(1, id);
+            st.setString(2, editedPhone);
+            st.setString(3, editedDescription);
+            st.execute();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    public void newPhone(int ID, String newPhone, String newDescription) {
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spAddClientPhone ?,?,?");
+            st.setInt(1, ID);
+            st.setString(2, newPhone);
+            st.setString(3, newDescription);
+            st.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }
