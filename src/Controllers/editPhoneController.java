@@ -2,6 +2,7 @@ package Controllers;
 
 import Functions.FXFunctions;
 import Functions.TableFunctions;
+import Functions.Utilities;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -25,7 +26,6 @@ public class editPhoneController {
         tf.editPhone(CurrentID, lblPhoneNumber.getText().trim(), lblDescription.getText().trim());
         fx.makeNewINFOalert("Exito", "se actualizó el teléfono").showAndWait();
         fx.hideCurrentWindow(event);
-
     }
 
     public void initialize(int ID, String Phone, String Description) {

@@ -54,8 +54,20 @@ public class mainController {
     }
 
     @FXML
-    public void employeeManagement(ActionEvent event) {
+    public void employeeManagement(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/employeeManagementView.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Administración de empleados");
+        employeeManagementController emc = loader.getController();
+        emc.refreshTable();
+        stage.centerOnScreen();
+        stage.show();
+
     }
+
 
     @FXML
     public void clientManagement(ActionEvent event) throws IOException {

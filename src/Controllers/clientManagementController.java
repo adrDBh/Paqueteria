@@ -3,6 +3,7 @@ package Controllers;
 import Functions.FXFunctions;
 import Functions.TableFunctions;
 import Models.clientModel;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -37,19 +38,43 @@ public class clientManagementController {
     private Label lblRows;
 
     @FXML
-    void onNew(ActionEvent event) {
+    void onNew(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/clientManagementNewView.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Crear nuevo cliente");
+        stage.centerOnScreen();
+        stage.show();
+        stage.setOnHiding(event1 -> Platform.runLater(() -> refreshTable()));
     }
 
     @FXML
-    void onEdit(ActionEvent event) {
+    void onEdit(ActionEvent event) throws IOException {
+        if (currentID != 0) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/clientManagementEditview.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Editar un cliente");
+            editClientController ecc = loader.getController();
+            ecc.initialize(Integer.parseInt(cm.getId()), cm.getName(), cm.getAPP(), cm.getAPM());
+            stage.centerOnScreen();
+            stage.show();
+            stage.setOnHiding(event1 -> Platform.runLater(() -> refreshTable()));
+        }
     }
 
     @FXML
     void onDelete() {
-        Optional<ButtonType> decision = fx.makeNewConfirmationAlert("Confirmación", "Eliminar entrada", "Estás seguro que quieres elminiar la entrada seleccionada?").showAndWait();
-        if (decision.get() == ButtonType.OK) {
-            tf.deleteClient(currentID);
-            refreshTable();
+        if (currentID != 0) {
+            Optional<ButtonType> decision = fx.makeNewConfirmationAlert("Confirmación", "Eliminar entrada", "Estás seguro que quieres elminiar la entrada seleccionada?").showAndWait();
+            if (decision.get() == ButtonType.OK) {
+                tf.deleteClient(currentID);
+                refreshTable();
+            }
         }
     }
 
@@ -90,9 +115,20 @@ public class clientManagementController {
     }
 
     @FXML
-    public void onClientEmails(ActionEvent event) {
-        if (cm.getId() != null) {
-            System.out.println(cm.getId() + ", " + cm.getName());
+    public void onClientEmails(ActionEvent event) throws IOException {
+        if (currentID != 0) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/clientManagementEmailsView.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Administración de correos");
+            clientManagementEmailController cmec = loader.getController();
+            System.out.println("ID DEL CLIENTE: " + cm.getId());
+            cmec.initialize(cm.getName(), Integer.parseInt(cm.getId()));
+            cmec.refreshTable();
+            stage.centerOnScreen();
+            stage.show();
         }
 
 
@@ -100,7 +136,7 @@ public class clientManagementController {
 
     @FXML
     public void onClientPhones(ActionEvent event) throws IOException {
-        if (cm.getId() != null) {
+        if (currentID != 0) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/clientPhoneView.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();

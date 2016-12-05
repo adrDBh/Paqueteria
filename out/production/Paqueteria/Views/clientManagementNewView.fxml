@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.newClientController">
+    <children>
+        <TextField fx:id="lblName" layoutX="200.0" layoutY="27.0" />
+        <TextField fx:id="lblAPP" layoutX="200.0" layoutY="65.0" />
+        <TextField fx:id="lblAPM" layoutX="200.0" layoutY="101.0" />
+        <TextField fx:id="lblPhone" layoutX="200.0" layoutY="138.0" />
+        <TextField fx:id="lblPhoneDescription" layoutX="200.0" layoutY="176.0" />
+        <TextField fx:id="lblEmail" layoutX="201.0" layoutY="212.0" />
+        <TextField fx:id="lblEmailDescription" layoutX="201.0" layoutY="253.0" />
+        <Label layoutX="52.0" layoutY="69.0" text="Apellido paterno" />
+        <Label layoutX="50.0" layoutY="105.0" text="Apellido materno" />
+        <Label layoutX="74.0" layoutY="31.0" text="Nombre" />
+        <Label layoutX="74.0" layoutY="142.0" text="Teléfono" />
+        <Label layoutX="52.0" layoutY="180.0" text="Descripción corta" />
+        <Label layoutX="78.0" layoutY="216.0" text="Correo" />
+        <Label layoutX="53.0" layoutY="257.0" text="Descripción corta" />
+        <Button layoutX="159.0" layoutY="330.0" mnemonicParsing="false" onAction="#onFinish" prefHeight="25.0" prefWidth="82.0" text="Crear" />
+    </children>
+</AnchorPane>

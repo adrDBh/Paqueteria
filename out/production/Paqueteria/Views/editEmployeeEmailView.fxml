@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0"
+            prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.editEmployeeEmailController">
+    <children>
+        <Label layoutX="99.0" layoutY="55.0" text="Correo"/>
+        <Label layoutX="86.0" layoutY="93.0" text="Descripción"/>
+        <TextField fx:id="lblEmail" layoutX="158.0" layoutY="51.0"/>
+        <TextField fx:id="lblDescription" layoutX="158.0" layoutY="89.0"/>
+        <Button layoutX="158.0" layoutY="161.0" mnemonicParsing="false" onAction="#onFinish" text="Actualizar datos"/>
+    </children>
+</AnchorPane>

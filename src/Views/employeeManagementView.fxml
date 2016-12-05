@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.employeeManagementController">
+    <children>
+        <SplitPane dividerPositions="0.20234113712374582" orientation="VERTICAL" prefHeight="600.0" prefWidth="900.0">
+            <items>
+                <AnchorPane id="Header" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0"
+                            stylesheets="@../Css/userAdmin.css">
+                    <children>
+                        <Label alignment="CENTER" layoutX="241.0" layoutY="35.0" prefHeight="48.0" prefWidth="417.0"
+                               text="Administración de empleados" textFill="WHITE">
+                            <font>
+                                <Font name="Meiryo" size="30.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <Separator layoutX="244.0" orientation="VERTICAL" prefHeight="474.0" prefWidth="0.0"/>
+                        <HBox alignment="CENTER" layoutX="250.0" layoutY="435.0" prefHeight="25.0" prefWidth="179.0"
+                              spacing="6.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#onNew" text="Nuevo"/>
+                                <Button mnemonicParsing="false" onAction="#onEdit" prefHeight="25.0" prefWidth="54.0"
+                                        text="Editar"/>
+                                <Button mnemonicParsing="false" onAction="#onDelete" text="Eliminar"/>
+                            </children>
+                        </HBox>
+                        <TableView fx:id="employeeTable" onKeyPressed="#onDelPressed" onMouseClicked="#onMouseAction"
+                                   prefHeight="427.0" prefWidth="900.0">
+                            <columns>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="30.0" resizable="false"
+                                             text="ID">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="id"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="217.5" text="Nombre">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="Name"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="217.5"
+                                             text="Apellido paterno">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="APP"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="217.5"
+                                             text="Apellido materno">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="APM"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="217.5" text="Turno">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="Turn"/>
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                        <HBox alignment="CENTER" layoutX="14.0" layoutY="435.0" prefHeight="25.0" prefWidth="226.0"
+                              spacing="6.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#onEmployeeEmails" text="Emails"/>
+                            </children>
+                        </HBox>
+                        <Label layoutX="755.0" layoutY="439.0" text="Filas obtenidas: "/>
+                        <Label fx:id="lblRows" layoutX="846.0" layoutY="439.0"/>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

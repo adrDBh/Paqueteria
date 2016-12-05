@@ -31,7 +31,7 @@ public class loginController {
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
-                stage.setTitle("Ventana principal");
+                stage.setTitle("Fast MX - Administración");
                 stage.centerOnScreen();
                 stage.show();
             } catch (Exception e) {

@@ -40,10 +40,11 @@
                 <Font name="System Italic" size="14.0" />
             </font>
         </Label>
-        <HBox alignment="CENTER" layoutX="14.0" layoutY="311.0" prefHeight="25.0" prefWidth="122.0" spacing="6.0">
+        <HBox alignment="CENTER" layoutX="14.0" layoutY="311.0" prefHeight="25.0" prefWidth="179.0" spacing="6.0">
             <children>
                 <Button mnemonicParsing="false" onAction="#onNew" text="Nuevo" />
                 <Button mnemonicParsing="false" onAction="#onEdit" prefHeight="25.0" prefWidth="54.0" text="Editar" />
+            <Button mnemonicParsing="false" onAction="#onDelete" text="Eliminar" />
             </children>
         </HBox>
     </children>

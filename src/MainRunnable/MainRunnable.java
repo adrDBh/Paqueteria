@@ -1,10 +1,12 @@
 package MainRunnable;
 
+import Functions.Utilities;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
 public class MainRunnable extends Application {
@@ -20,6 +22,5 @@ public class MainRunnable extends Application {
         } catch (IOException e) {
             System.err.println(e.getMessage());
         }
-
     }
 }
