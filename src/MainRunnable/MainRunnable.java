@@ -1,6 +1,5 @@
 package MainRunnable;
 
-import Functions.Utilities;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MainRunnable extends Application {
+    @Override
     public void start(Stage primaryStage) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/loginView.fxml"));
@@ -20,7 +20,7 @@ public class MainRunnable extends Application {
             primaryStage.centerOnScreen();
             primaryStage.show();
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            System.err.println("Error de I/O" + e.getMessage());
         }
     }
 }

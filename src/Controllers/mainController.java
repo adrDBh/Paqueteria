@@ -35,8 +35,17 @@ public class mainController {
     }
 
     @FXML
-    public void registerService(ActionEvent event) {
-        // REGISTRO DE SERVICIOS
+    public void registerService(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/registerServiceView.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("FastMX - Registro de servicios");
+        registerServiceController rsc = loader.getController();
+        stage.centerOnScreen();
+        stage.show();
+
     }
 
     @FXML

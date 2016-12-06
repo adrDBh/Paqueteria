@@ -3,12 +3,20 @@ package Functions;
 import javafx.event.Event;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TextInputDialog;
 
 public class FXFunctions {
 
-
     public void hideCurrentWindow(Event e) {
         ((Node) (e.getSource())).getScene().getWindow().hide();
+    }
+
+    public TextInputDialog makeFoilDialog(String textBoxValue) {
+        TextInputDialog dialog = new TextInputDialog(textBoxValue);
+        dialog.setTitle("Éxito");
+        dialog.setHeaderText("Nuevo servicio registrado");
+        dialog.setContentText("Código de rastreo generado: ");
+        return dialog;
     }
 
     public Alert makeNewINFOalert(String title, String content) {

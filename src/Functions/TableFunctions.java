@@ -329,4 +329,59 @@ public class TableFunctions {
             System.err.println("Error de SQL: " + e.getMessage());
         }
     }
+
+    public void newService(String ClientName, String ClientAPP, String ClientAPM,
+                           String Fragil, String Prioridad, String Peso,
+                           String Alto, String Largo, String Ancho,
+                           String Descripcion, String EmpName, String EmpApp,
+                           String EmpApm, String O_Calle, String O_Numero,
+                           String O_Colonia, String O_CP, String O_Ciudad,
+                           String O_Estado, String Origen, String D_Calle,
+                           String D_Numero, String D_Colonia, String D_CP,
+                           String D_Ciudad, String D_Estado, String Destino,
+                           String Folio, String Costo, String Transporte) {
+
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spCreateService ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?");
+            st.setString(1, ClientName);
+            st.setString(2, ClientAPP);
+            st.setString(3, ClientAPM);
+            // DATOS DE CLIENTE
+            st.setString(4, Fragil);
+            st.setString(5, Prioridad);
+            st.setString(6, Peso);
+            st.setString(7, Alto);
+            st.setString(8, Largo);
+            st.setString(9, Ancho);
+            st.setString(10, Descripcion);
+            // DATOS DE PAQUETE
+            st.setString(11, EmpName);
+            st.setString(12, EmpApp);
+            st.setString(13, EmpApm);
+            // DATOS DEL EMPLEADO
+            st.setString(14, O_Calle);
+            st.setString(15, O_Numero);
+            st.setString(16, O_Colonia);
+            st.setString(17, O_CP);
+            st.setString(18, O_Ciudad);
+            st.setString(19, O_Estado);
+            st.setString(20, Origen);
+            // DATOS DEL ORIGEN
+            st.setString(21, D_Calle);
+            st.setString(22, D_Numero);
+            st.setString(23, D_Colonia);
+            st.setString(24, D_CP);
+            st.setString(25, D_Ciudad);
+            st.setString(26, D_Estado);
+            st.setString(27, Destino);
+            // DATOS DEL DESTINO
+            st.setString(28, Folio);
+            st.setString(29, Costo);
+            st.setString(30, Transporte);
+            // DATOS DEL RASTREO
+            st.execute();
+        } catch (SQLException e) {
+            System.err.println("Error de SQL: " + e.getMessage());
+        }
+    }
 }
