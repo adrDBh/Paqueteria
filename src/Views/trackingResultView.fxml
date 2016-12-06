@@ -71,7 +71,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Urgente" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Urgencia" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -83,7 +83,7 @@
                   </Label>
                   <Label fx:id="lblFolio" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="17.0" />
                      </font>
                   </Label>
                   <Label fx:id="lblOrigen" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="1" GridPane.rowIndex="2">

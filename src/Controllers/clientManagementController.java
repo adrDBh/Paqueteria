@@ -111,7 +111,6 @@ public class clientManagementController {
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
-
     }
 
     @FXML

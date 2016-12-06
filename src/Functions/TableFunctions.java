@@ -1,9 +1,6 @@
 package Functions;
 
-import sun.security.krb5.internal.crypto.Des;
-
 import java.sql.*;
-import java.util.concurrent.Callable;
 
 public class TableFunctions {
     private Connection dbo = new DBRequests().getDbo();
@@ -379,6 +376,50 @@ public class TableFunctions {
             st.setString(29, Costo);
             st.setString(30, Transporte);
             // DATOS DEL RASTREO
+            st.execute();
+        } catch (SQLException e) {
+            System.err.println("Error de SQL: " + e.getMessage());
+        }
+    }
+
+    public ResultSet searchTrackingNumber(String TrackingCode) {
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spFindTracking ?");
+            st.setString(1, TrackingCode);
+            rs = st.executeQuery();
+        } catch (SQLException e) {
+            System.err.println("Error de SQL: " + e.getMessage());
+        } finally {
+            return rs;
+        }
+    }
+
+    public ResultSet getServiceData() {
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spListServices");
+            rs = st.executeQuery();
+        } catch (SQLException e) {
+            System.err.println("Error de SQL: " + e.getMessage());
+        } finally {
+            return rs;
+        }
+    }
+
+    public void updateLocation(int ID, String Localization) {
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spEditLocation ?,?");
+            st.setInt(1, ID);
+            st.setString(2, Localization);
+            st.execute();
+        } catch (SQLException e) {
+            System.err.println("Error de SQL: " + e.getMessage());
+        }
+    }
+
+    public void deleteService(int ID) {
+        try {
+            CallableStatement st = dbo.prepareCall("EXECUTE spDelService ?");
+            st.setInt(1, ID);
             st.execute();
         } catch (SQLException e) {
             System.err.println("Error de SQL: " + e.getMessage());

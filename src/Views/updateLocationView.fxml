@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="Controllers.updateLocationController">
+   <children>
+      <Label layoutX="208.0" layoutY="29.0" prefHeight="27.0" prefWidth="184.0" text="Actualizar Localización" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblLocation" layoutX="208.0" layoutY="113.0" prefHeight="25.0" prefWidth="184.0" promptText="Nueva localización" />
+      <Button layoutX="266.0" layoutY="211.0" mnemonicParsing="false" onAction="#onFinish" text="Actualizar" />
+   </children>
+</AnchorPane>

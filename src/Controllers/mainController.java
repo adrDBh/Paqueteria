@@ -37,8 +37,17 @@ public class mainController {
     }
 
     @FXML
-    public void serviceManagement(ActionEvent event) {
-        // ADMINISTRACION DE SERVICIOS
+    public void serviceManagement(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/serviceManagementView.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("FastMX - Administración de servicios");
+        serviceManagementController smc = loader.getController();
+        smc.refreshTable();
+        stage.centerOnScreen();
+        stage.show();
     }
 
     @FXML

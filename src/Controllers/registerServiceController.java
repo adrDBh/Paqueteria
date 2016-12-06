@@ -176,7 +176,7 @@ public class registerServiceController {
         fillcbEmployee();
         Fragil.getItems().addAll("Sí", "No");
         Prioridad.getItems().addAll("Alta", "Normal");
-        cbTransport.getItems().addAll("Aérea", "Terrestre", "Marítima");
+        cbTransport.getItems().addAll("Aéreo", "Terrestre", "Marítimo");
     }
 
     void fillcbUsers() {
