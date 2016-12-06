@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.trackingResultController">
+   <children>
+      <Label layoutX="313.0" layoutY="14.0" text="Información sobre rastreo">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <StackPane prefHeight="500.0" prefWidth="900.0">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Folio" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Origen" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Localización" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Cliente" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Descripción" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Transportista" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Destino" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Transporte" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Urgente" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: lightblue;" text="Peso" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFolio" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblOrigen" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLocalizacion" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCliente" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDescription" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblEmployee" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDestino" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTransporte" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUrgent" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPeso" alignment="CENTER" prefHeight="60.0" prefWidth="225.0" style="-fx-background-color: #fa8072;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

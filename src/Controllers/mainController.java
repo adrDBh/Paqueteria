@@ -25,8 +25,15 @@ public class mainController {
     }
 
     @FXML
-    void locatePackage(ActionEvent event) {
-        // RASTREO
+    void locatePackage(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/trackingSearchView.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Fast MX - Búscar por código de rastreo");
+        stage.centerOnScreen();
+        stage.show();
     }
 
     @FXML
@@ -49,13 +56,13 @@ public class mainController {
     }
 
     @FXML
-    void loginAdmin(ActionEvent event) throws IOException, SQLException {
+    void loginAdmin(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/userAdminView.fxml"));
         Parent root = loader.load();
         Stage stage = new Stage();
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Administración de usuarios");
+        stage.setTitle("FastMX - Administración de usuarios");
         userAdminController mc = loader.getController();
         mc.refreshTable();
         stage.centerOnScreen();

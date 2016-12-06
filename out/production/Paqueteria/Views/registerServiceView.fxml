@@ -13,7 +13,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.registerServiceController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.registerServiceController">
     <children>
         <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
@@ -21,21 +23,24 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <Button layoutX="267.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab1" text="Siguiente" />
-                                <ComboBox fx:id="cbUsers" layoutX="303.0" layoutY="128.0" prefWidth="150.0" promptText="Seleccionar cliente" />
-                        <Label layoutX="210.0" layoutY="14.0" text="Registrar servicio">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="217.0" layoutY="49.0" text="Datos de cliente">
-                           <font>
-                              <Font name="System Italic" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="155.0" layoutY="132.0" text="Selecciona uno existente" />
-                        <Label layoutX="177.0" layoutY="177.0" text="Crear uno nuevo" />
-                        <Button layoutX="371.0" layoutY="173.0" mnemonicParsing="false" onAction="#onNewClient" text="+" />
+                                <Button layoutX="267.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab1"
+                                        text="Siguiente"/>
+                                <ComboBox fx:id="cbUsers" layoutX="303.0" layoutY="128.0" prefWidth="150.0"
+                                          promptText="Seleccionar cliente"/>
+                                <Label layoutX="210.0" layoutY="14.0" text="Registrar servicio">
+                                    <font>
+                                        <Font size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="217.0" layoutY="49.0" text="Datos de cliente">
+                                    <font>
+                                        <Font name="System Italic" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="155.0" layoutY="132.0" text="Selecciona uno existente"/>
+                                <Label layoutX="177.0" layoutY="177.0" text="Crear uno nuevo"/>
+                                <Button layoutX="371.0" layoutY="173.0" mnemonicParsing="false" onAction="#onNewClient"
+                                        text="+"/>
                             </children>
                         </AnchorPane>
                     </content>
@@ -43,143 +48,163 @@
                 <Tab fx:id="Tab2" disable="true" text="Paquete">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Label layoutX="206.0" layoutY="49.0" text="Datos del paquete">
-                           <font>
-                              <Font name="System Italic" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="210.0" layoutY="14.0" text="Registrar servicio">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <ComboBox fx:id="Fragil" layoutX="276.0" layoutY="93.0" prefHeight="25.0" prefWidth="150.0" promptText="Selecciona un valor" />
-                        <Label layoutX="219.0" layoutY="97.0" text="Frágil" />
-                        <Label layoutX="210.0" layoutY="129.0" text="Prioridad" />
-                        <Label layoutX="210.0" layoutY="160.0" text="Peso (KG)" />
-                        <TextField fx:id="lblPeso" layoutX="276.0" layoutY="156.0" />
-                        <TextField fx:id="lblAlto" layoutX="276.0" layoutY="192.0" />
-                        <Label layoutX="224.0" layoutY="196.0" text="Alto" />
-                        <Label layoutX="219.0" layoutY="227.0" text="Largo" />
-                        <TextField fx:id="lblLargo" layoutX="276.0" layoutY="223.0" />
-                        <Label layoutX="217.0" layoutY="258.0" text="Ancho" />
-                        <TextField fx:id="lblAncho" layoutX="276.0" layoutY="254.0" />
-                        <Button layoutX="267.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab2" text="Siguiente" />
-                        <TextField fx:id="lblDescripcion" layoutX="276.0" layoutY="285.0" />
-                        <Label layoutX="205.0" layoutY="289.0" text="Descripción" />
-                        <ComboBox fx:id="Prioridad" layoutX="276.0" layoutY="125.0" prefHeight="25.0" prefWidth="150.0" promptText="Selecciona un valor" />
-                     </children></AnchorPane>
+                            <children>
+                                <ComboBox fx:id="Fragil" layoutX="276.0" layoutY="93.0" prefHeight="25.0"
+                                          prefWidth="150.0" promptText="Selecciona un valor"/>
+                                <ComboBox fx:id="Prioridad" layoutX="276.0" layoutY="125.0" prefHeight="25.0"
+                                          prefWidth="150.0" promptText="Selecciona un valor"/>
+                                <TextField fx:id="lblPeso" layoutX="276.0" layoutY="156.0"/>
+                                <TextField fx:id="lblAlto" layoutX="276.0" layoutY="192.0"/>
+                                <TextField fx:id="lblLargo" layoutX="276.0" layoutY="223.0"/>
+                                <TextField fx:id="lblAncho" layoutX="276.0" layoutY="254.0"/>
+                                <TextField fx:id="lblDescripcion" layoutX="276.0" layoutY="285.0"/>
+                                <Label layoutX="206.0" layoutY="49.0" text="Datos del paquete">
+                                    <font>
+                                        <Font name="System Italic" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="210.0" layoutY="14.0" text="Registrar servicio">
+                                    <font>
+                                        <Font size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="219.0" layoutY="97.0" text="Frágil"/>
+                                <Label layoutX="210.0" layoutY="129.0" text="Prioridad"/>
+                                <Label layoutX="210.0" layoutY="160.0" text="Peso (KG)"/>
+                                <Label layoutX="224.0" layoutY="196.0" text="Alto"/>
+                                <Label layoutX="219.0" layoutY="227.0" text="Largo"/>
+                                <Label layoutX="217.0" layoutY="258.0" text="Ancho"/>
+                                <Button layoutX="267.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab2"
+                                        text="Siguiente"/>
+                                <Label layoutX="205.0" layoutY="289.0" text="Descripción"/>
+                            </children>
+                        </AnchorPane>
                     </content>
                 </Tab>
-            <Tab fx:id="Tab3" disable="true" text="Empleado">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button layoutX="362.0" layoutY="173.0" mnemonicParsing="false" onAction="#onNewEmployee" text="+" />
-                        <Label layoutX="177.0" layoutY="177.0" text="Crear un nuevo" />
-                        <Label layoutX="152.0" layoutY="132.0" text="Selecciona uno existente" />
-                        <ComboBox fx:id="cbEmployee" layoutX="299.0" layoutY="128.0" prefHeight="25.0" prefWidth="160.0" promptText="Seleccionar empleado" />
-                        <Label layoutX="198.0" layoutY="49.0" text="Datos del empleado">
-                           <font>
-                              <Font name="System Italic" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="211.0" layoutY="14.0" text="Registrar servicio">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="266.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab3" text="Siguiente" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab fx:id="Tab4" disable="true" text="Origen">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Label layoutX="219.0" layoutY="49.0" text="Datos de origen">
-                           <font>
-                              <Font name="System Italic" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="211.0" layoutY="14.0" text="Registrar servicio">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="268.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab4" text="Siguiente" />
-                        <TextField fx:id="Origin_lblStreet" layoutX="254.0" layoutY="102.0" />
-                        <TextField fx:id="Origin_lblStreetNum" layoutX="254.0" layoutY="140.0" />
-                        <Label layoutX="206.0" layoutY="106.0" prefHeight="17.0" prefWidth="32.0" text="Calle" />
-                        <Label layoutX="199.0" layoutY="144.0" prefHeight="17.0" prefWidth="46.0" text="Número" />
-                        <Label layoutX="201.0" layoutY="179.0" prefHeight="17.0" prefWidth="43.0" text="Colonia" />
-                        <TextField fx:id="Origin_lblColony" layoutX="254.0" layoutY="175.0" />
-                        <TextField fx:id="Origin_lblCity" layoutX="254.0" layoutY="211.0" />
-                        <Label layoutX="201.0" layoutY="215.0" prefHeight="17.0" prefWidth="42.0" text="Ciudad" />
-                        <Label layoutX="200.0" layoutY="282.0" prefHeight="17.0" prefWidth="42.0" text="Estado" />
-                        <TextField fx:id="Origin_lblState" layoutX="253.0" layoutY="278.0" />
-                        <Label layoutX="211.0" layoutY="249.0" prefHeight="17.0" prefWidth="21.0" text="CP" />
-                        <TextField fx:id="Origin_CP" layoutX="253.0" layoutY="245.0" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab fx:id="Tab5" disable="true" text="Destino">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Label layoutX="214.0" layoutY="49.0" text="Datos de destino">
-                           <font>
-                              <Font name="System Italic" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="211.0" layoutY="14.0" text="Registrar servicio">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="268.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab5" text="Siguiente" />
-                        <TextField fx:id="Destiny_lblStreet" layoutX="254.0" layoutY="102.0" />
-                        <TextField fx:id="Destiny_lblStreetNum" layoutX="254.0" layoutY="140.0" />
-                        <Label layoutX="206.0" layoutY="106.0" prefHeight="17.0" prefWidth="32.0" text="Calle" />
-                        <Label layoutX="199.0" layoutY="144.0" prefHeight="17.0" prefWidth="46.0" text="Número" />
-                        <Label layoutX="201.0" layoutY="179.0" prefHeight="17.0" prefWidth="43.0" text="Colonia" />
-                        <TextField fx:id="Destiny_lblColony" layoutX="254.0" layoutY="175.0" />
-                        <TextField fx:id="Destiny_lblCity" layoutX="254.0" layoutY="211.0" />
-                        <Label layoutX="201.0" layoutY="215.0" prefHeight="17.0" prefWidth="42.0" text="Ciudad" />
-                        <Label layoutX="200.0" layoutY="280.0" prefHeight="17.0" prefWidth="42.0" text="Estado" />
-                        <TextField fx:id="Destiny_lblState" layoutX="253.0" layoutY="276.0" />
-                        <TextField fx:id="Destiny_CP" layoutX="253.0" layoutY="243.0" />
-                        <Label layoutX="211.0" layoutY="247.0" prefHeight="17.0" prefWidth="21.0" text="CP" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab fx:id="Tab6" disable="true" text="Costo">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Label layoutX="219.0" layoutY="49.0" text="Datos de origen">
-                           <font>
-                              <Font name="System Italic" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="211.0" layoutY="14.0" text="Registrar servicio">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="268.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishALL" text="Siguiente" />
-                        <TextField fx:id="lblCost" layoutX="251.0" layoutY="173.0" />
-                        <Label layoutX="203.0" layoutY="177.0" prefHeight="17.0" prefWidth="32.0" text="Costo" />
-                        <Label layoutX="188.0" layoutY="140.0" prefHeight="17.0" prefWidth="62.0" text="Transporte" />
-                        <ComboBox fx:id="cbTransport" layoutX="251.0" layoutY="136.0" prefWidth="150.0" promptText="Selecciona un valor" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
+                <Tab fx:id="Tab3" disable="true" text="Empleado">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button layoutX="362.0" layoutY="173.0" mnemonicParsing="false"
+                                        onAction="#onNewEmployee" text="+"/>
+                                <Label layoutX="177.0" layoutY="177.0" text="Crear un nuevo"/>
+                                <Label layoutX="152.0" layoutY="132.0" text="Selecciona uno existente"/>
+                                <ComboBox fx:id="cbEmployee" layoutX="299.0" layoutY="128.0" prefHeight="25.0"
+                                          prefWidth="160.0" promptText="Seleccionar empleado"/>
+                                <Label layoutX="198.0" layoutY="49.0" text="Datos del empleado">
+                                    <font>
+                                        <Font name="System Italic" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="211.0" layoutY="14.0" text="Registrar servicio">
+                                    <font>
+                                        <Font size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="266.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab3"
+                                        text="Siguiente"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="Tab4" disable="true" text="Origen">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="Origin_lblStreet" layoutX="254.0" layoutY="102.0"/>
+                                <TextField fx:id="Origin_lblStreetNum" layoutX="254.0" layoutY="140.0"/>
+                                <TextField fx:id="Origin_lblColony" layoutX="254.0" layoutY="175.0"/>
+                                <TextField fx:id="Origin_lblCity" layoutX="254.0" layoutY="211.0"/>
+                                <TextField fx:id="Origin_CP" layoutX="253.0" layoutY="245.0"/>
+                                <TextField fx:id="Origin_lblState" layoutX="253.0" layoutY="278.0"/>
+                                <Label layoutX="219.0" layoutY="49.0" text="Datos de origen">
+                                    <font>
+                                        <Font name="System Italic" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="211.0" layoutY="14.0" text="Registrar servicio">
+                                    <font>
+                                        <Font size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="268.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab4"
+                                        text="Siguiente"/>
+                                <Label layoutX="206.0" layoutY="106.0" prefHeight="17.0" prefWidth="32.0" text="Calle"/>
+                                <Label layoutX="199.0" layoutY="144.0" prefHeight="17.0" prefWidth="46.0"
+                                       text="Número"/>
+                                <Label layoutX="201.0" layoutY="179.0" prefHeight="17.0" prefWidth="43.0"
+                                       text="Colonia"/>
+                                <Label layoutX="201.0" layoutY="215.0" prefHeight="17.0" prefWidth="42.0"
+                                       text="Ciudad"/>
+                                <Label layoutX="200.0" layoutY="282.0" prefHeight="17.0" prefWidth="42.0"
+                                       text="Estado"/>
+                                <Label layoutX="211.0" layoutY="249.0" prefHeight="17.0" prefWidth="21.0" text="CP"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="Tab5" disable="true" text="Destino">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="Destiny_lblStreet" layoutX="254.0" layoutY="102.0"/>
+                                <TextField fx:id="Destiny_lblStreetNum" layoutX="254.0" layoutY="140.0"/>
+                                <TextField fx:id="Destiny_lblColony" layoutX="254.0" layoutY="175.0"/>
+                                <TextField fx:id="Destiny_lblCity" layoutX="254.0" layoutY="211.0"/>
+                                <TextField fx:id="Destiny_CP" layoutX="253.0" layoutY="243.0"/>
+                                <TextField fx:id="Destiny_lblState" layoutX="253.0" layoutY="276.0"/>
+                                <Label layoutX="214.0" layoutY="49.0" text="Datos de destino">
+                                    <font>
+                                        <Font name="System Italic" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="211.0" layoutY="14.0" text="Registrar servicio">
+                                    <font>
+                                        <Font size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="268.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishTab5"
+                                        text="Siguiente"/>
+                                <Label layoutX="206.0" layoutY="106.0" prefHeight="17.0" prefWidth="32.0" text="Calle"/>
+                                <Label layoutX="199.0" layoutY="144.0" prefHeight="17.0" prefWidth="46.0"
+                                       text="Número"/>
+                                <Label layoutX="201.0" layoutY="179.0" prefHeight="17.0" prefWidth="43.0"
+                                       text="Colonia"/>
+                                <Label layoutX="201.0" layoutY="215.0" prefHeight="17.0" prefWidth="42.0"
+                                       text="Ciudad"/>
+                                <Label layoutX="200.0" layoutY="280.0" prefHeight="17.0" prefWidth="42.0"
+                                       text="Estado"/>
+                                <Label layoutX="211.0" layoutY="247.0" prefHeight="17.0" prefWidth="21.0" text="CP"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="Tab6" disable="true" text="Costo">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="219.0" layoutY="49.0" text="Datos de origen">
+                                    <font>
+                                        <Font name="System Italic" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="211.0" layoutY="14.0" text="Registrar servicio">
+                                    <font>
+                                        <Font size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="248.0" layoutY="332.0" mnemonicParsing="false" onAction="#onFinishALL"
+                                        text="Registrar servicio"/>
+                                <ComboBox fx:id="cbTransport" layoutX="251.0" layoutY="136.0" prefWidth="150.0"
+                                          promptText="Selecciona un valor"/>
+                                <TextField fx:id="lblCost" layoutX="251.0" layoutY="173.0"/>
+                                <Label layoutX="203.0" layoutY="177.0" prefHeight="17.0" prefWidth="32.0" text="Costo"/>
+                                <Label layoutX="188.0" layoutY="140.0" prefHeight="17.0" prefWidth="62.0"
+                                       text="Transporte"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
             </tabs>
         </TabPane>
     </children>

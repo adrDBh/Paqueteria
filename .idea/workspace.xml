@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2707644-2f7c-47bf-a9c4-e060cee50d2f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controllers/registerServiceController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MainRunnable/test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Views/registerServiceView.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controllers/trackingResultController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controllers/trackingSearchController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Views/trackingResultView.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Views/trackingSearchView.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JOINS.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/superquerydiabolico.sql" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paqueteria/Controllers/mainController.class" afterPath="$PROJECT_DIR$/out/production/Paqueteria/Controllers/mainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paqueteria/Functions/TableFunctions.class" afterPath="$PROJECT_DIR$/out/production/Paqueteria/Functions/TableFunctions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paqueteria/Functions/FXFunctions.class" afterPath="$PROJECT_DIR$/out/production/Paqueteria/Functions/FXFunctions.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paqueteria/Functions/Utilities.class" afterPath="$PROJECT_DIR$/out/production/Paqueteria/Functions/Utilities.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paqueteria/MainRunnable/MainRunnable.class" afterPath="$PROJECT_DIR$/out/production/Paqueteria/MainRunnable/MainRunnable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paqueteria/MainRunnable/test.class" afterPath="$PROJECT_DIR$/out/production/Paqueteria/MainRunnable/test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paqueteria/Views/registerServiceView.fxml" afterPath="$PROJECT_DIR$/out/production/Paqueteria/Views/registerServiceView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/mainController.java" afterPath="$PROJECT_DIR$/src/Controllers/mainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Functions/FXFunctions.java" afterPath="$PROJECT_DIR$/src/Functions/FXFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Functions/TableFunctions.java" afterPath="$PROJECT_DIR$/src/Functions/TableFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Functions/Utilities.java" afterPath="$PROJECT_DIR$/src/Functions/Utilities.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainRunnable/MainRunnable.java" afterPath="$PROJECT_DIR$/src/MainRunnable/MainRunnable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Views/loginView.fxml" afterPath="$PROJECT_DIR$/src/Views/loginView.fxml" />
     </list>
     <ignored path="Paqueteria.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,12 +50,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainRunnable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainRunnable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainRunnable/MainRunnable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="323">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/mainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+              <folding>
+                <element signature="method#registerService#0;class#mainController#0" expanded="false" />
+                <element signature="method#employeeManagement#0;class#mainController#0" expanded="false" />
+                <element signature="method#clientManagement#0;class#mainController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/loginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trackingSearchView.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Views/trackingSearchView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trackingSearchController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/trackingSearchController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trackingResultView.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Views/trackingResultView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trackingResultController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/trackingResultController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registerServiceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/registerServiceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="193" column="5" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
+              <folding>
+                <element signature="method#onFinishTab1#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#onFinishTab2#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#onFinishTab3#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#onFinishTab4#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#onFinishTab5#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#onFinishALL#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#onNewEmployee#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#onNewClient#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#initialize#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#fillcbUsers#0;class#registerServiceController#0" expanded="false" />
+                <element signature="method#fillcbEmployee#0;class#registerServiceController#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,11 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Views/mainView.fxml" />
-        <option value="$PROJECT_DIR$/src/Functions/FXWindowManagement.java" />
-        <option value="$PROJECT_DIR$/src/Views/userAdminView.fxml" />
-        <option value="$PROJECT_DIR$/src/Views/mainView_OLD.fxml" />
-        <option value="$PROJECT_DIR$/src/Views/clientManagementView.fxml" />
         <option value="$PROJECT_DIR$/src/Models/userModel.java" />
         <option value="$PROJECT_DIR$/src/Models/clientModel.java" />
         <option value="$PROJECT_DIR$/src/Views/ClientPhoneView.fxml" />
@@ -123,13 +215,18 @@
         <option value="$PROJECT_DIR$/src/Controllers/employeeManagementEmailsController.java" />
         <option value="$PROJECT_DIR$/src/Controllers/loginController.java" />
         <option value="$PROJECT_DIR$/src/MainRunnable/MainRunnable.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/mainController.java" />
         <option value="$PROJECT_DIR$/src/Controllers/registerServiceController.java" />
         <option value="$PROJECT_DIR$/src/Views/registerServiceView.fxml" />
         <option value="$PROJECT_DIR$/src/MainRunnable/test.java" />
         <option value="$PROJECT_DIR$/src/Functions/FXFunctions.java" />
         <option value="$PROJECT_DIR$/src/Functions/Utilities.java" />
         <option value="$PROJECT_DIR$/src/Functions/TableFunctions.java" />
+        <option value="$PROJECT_DIR$/src/Views/trackingSearchView.fxml" />
+        <option value="$PROJECT_DIR$/src/Views/trackingResultView.fxml" />
+        <option value="$PROJECT_DIR$/src/Controllers/trackingResultController.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/trackingSearchController.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/mainController.java" />
+        <option value="$PROJECT_DIR$/src/Views/loginView.fxml" />
       </list>
     </option>
   </component>
@@ -272,6 +369,24 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Paqueteria" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Paqueteria" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -306,6 +421,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Functions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Paqueteria" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Paqueteria" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -592,16 +725,16 @@
       <workItem from="1480880001544" duration="14870000" />
       <workItem from="1480947935107" duration="17500000" />
       <workItem from="1480986559355" duration="7133000" />
-      <workItem from="1480999664631" duration="2295000" />
+      <workItem from="1480999664631" duration="5015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102810000" />
+    <option name="totallyTimeSpent" value="105530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -609,7 +742,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39323467" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47991544" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47991544" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15208334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -681,75 +814,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../jtds-1.3.1.jar!/net/sourceforge/jtds/jdbc/Driver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functions/DBRequests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="method#getLogin#0;class#DBRequests#0" expanded="false" />
-            <marker date="1480105217015" expanded="true" signature="1505:1588" ph="SELECT usern... login" />
-            <marker date="1480105217015" expanded="true" signature="2083:2132" ph="UPDATE Login... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Views/newPhoneView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/newPhoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#422#423#0" expanded="false" />
-            <element signature="e#462#463#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Controllers.loginController">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Controllers.loginController</OriginalElement>
-          <nodes>
-            <node x="" y="">Controllers.loginController</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="56.0" y="15.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Views/clientManagementView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Views/mainView.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1006,17 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/mainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
-          <folding>
-            <element signature="method#employeeManagement#0;class#mainController#0" expanded="false" />
-            <element signature="method#clientManagement#0;class#mainController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/employeeManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -1030,13 +1083,6 @@
             <element signature="method#onDelPressed#0;class#employeeManagementController#0" expanded="false" />
             <element signature="method#onEmployeeEmails#0;class#employeeManagementController#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/loginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="35" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1059,6 +1105,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,6 +1113,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
           <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1084,6 +1132,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="1777" column="0" selection-start-line="1777" selection-start-column="0" selection-end-line="1777" selection-end-column="0" />
+          <folding>
+            <element signature="e#66921#66922#0" expanded="true" />
+            <element signature="e#66966#66967#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,18 +1147,6 @@
         <state relative-caret-position="119">
           <caret line="181" column="34" selection-start-line="181" selection-start-column="34" selection-end-line="181" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/registerServiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="140" column="40" selection-start-line="140" selection-start-column="40" selection-end-line="140" selection-end-column="40" />
-          <folding>
-            <element signature="method#onNewEmployee#0;class#registerServiceController#0" expanded="false" />
-            <element signature="method#fillcbUsers#0;class#registerServiceController#0" expanded="false" />
-            <element signature="method#fillcbEmployee#0;class#registerServiceController#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,10 +1256,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functions/TimeStamps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/registerServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="193" column="5" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
+          <folding>
+            <element signature="method#onFinishTab1#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#onFinishTab2#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#onFinishTab3#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#onFinishTab4#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#onFinishTab5#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#onFinishALL#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#onNewEmployee#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#onNewClient#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#initialize#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#fillcbUsers#0;class#registerServiceController#0" expanded="false" />
+            <element signature="method#fillcbEmployee#0;class#registerServiceController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainRunnable/MainRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="323">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/trackingSearchView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/trackingResultView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/trackingResultController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/trackingSearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/mainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+          <folding>
+            <element signature="method#registerService#0;class#mainController#0" expanded="false" />
+            <element signature="method#employeeManagement#0;class#mainController#0" expanded="false" />
+            <element signature="method#clientManagement#0;class#mainController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/loginView.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="126" selection-start-line="18" selection-start-column="126" selection-end-line="18" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/loginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
